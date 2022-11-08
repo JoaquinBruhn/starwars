@@ -1,0 +1,18 @@
+.logo {
+  height: 70px;
+  margin: 20px;
+}
+
+.linksNav {
+  color: var(--secondary-color) !important;
+  margin: 10px;
+}
+
+.linksNav > h2 {
+  transition: ease-in 0.2s;
+}
+
+.linksNav > h2:hover {
+  font-size: 2.5rem;
+  transition: ease-in 0.2s;
+}
