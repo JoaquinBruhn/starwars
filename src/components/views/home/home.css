@@ -1,0 +1,8 @@
+.home-container {
+  height: 300px;
+  background-color: rgb(204, 11, 11);
+  border-radius: 50px;
+}
+.home-container * {
+  color: var(--secondary-color);
+}
