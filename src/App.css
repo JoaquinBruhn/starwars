@@ -1,23 +1,24 @@
 :root {
   --primary-color: #000;
   --secondary-color: #ffffff;
+  --tertiary-color: #ffff00;
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  width: 100%;
   min-height: 100vh;
   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .App * {
   box-shadow: none !important;
 }
 
-.stars {
+/* .stars {
   background-repeat: repeat-y;
   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
   position: absolute;
@@ -44,4 +45,4 @@
   -o-animation: move-background 70s linear infinite;
   -webkit-animation: move-background 70s linear infinite;
   animation: move-background 70s linear infinite;
-}
+} */

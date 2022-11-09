@@ -8,7 +8,7 @@ import "./navigation.css";
 const Navigation = () => {
   return (
     <>
-      <Navbar className="navbar" variant="dark" bg="bg-transparent" justify expand="lg" sticky="top">
+      <Navbar className="navbar" variant="dark" expand="lg" sticky="top">
         <Container fluid>
           <Navbar.Brand href="#home">
             <img src={logo} className="logo" alt="logo" />
