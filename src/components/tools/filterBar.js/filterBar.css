@@ -1,0 +1,16 @@
+.filter-bar {
+  padding: 0 20px;
+  border: solid 1px var(--secondary-color);
+  background: var(--primary-color);
+}
+
+.filter-selector {
+  text-transform: capitalize;
+  color: var(--tertiary-color);
+  margin: 20px 0;
+  transition: ease-in 0.5s;
+}
+
+.selected-filter {
+  color: var(--secondary-color);
+}

@@ -5,19 +5,18 @@ import "./dailyCard.css";
 
 const DailyCard = ({ type }) => {
   const [characterType, setCharacterType] = useState(type);
-  const [character, setCharacter] = useState("");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    async function getObject(prop) {
+    async function getSearch(prop) {
       const res = await reqRndmChar(prop);
-      console.log(res);
       if (res.detail) {
         setCharacterType("not found");
       } else {
-        setCharacter(res);
+        setSearch(res);
       }
     }
-    getObject(type);
+    getSearch(type);
   }, [type]);
 
   switch (characterType) {
@@ -26,10 +25,10 @@ const DailyCard = ({ type }) => {
         <Col className="daily-card" md={6} xs={12}>
           <h4>Character:</h4>
           <div className="char-info">
-            <h5>{character.name ? character.name : ". . .loading"}</h5>
-            <p>Year of birth: {character.birth_year ? character.birth_year : ". . .loading"}</p>
-            <p>Height: {character.height ? character.height : ". . .loading"}</p>
-            <p>Weight: {character.mass ? character.mass + " Kg" : ". . .loading"} </p>
+            <h5>{search.name ? search.name : ". . .loading"}</h5>
+            <p>Year of birth: {search.birth_year ? search.birth_year : ". . .loading"}</p>
+            <p>Height: {search.height ? search.height : ". . .loading"}</p>
+            <p>Weight: {search.mass ? search.mass + " Kg" : ". . .loading"} </p>
           </div>
         </Col>
       );
@@ -38,12 +37,12 @@ const DailyCard = ({ type }) => {
         <Col className="daily-card" md={6} xs={12}>
           <h4>Planet:</h4>
           <div className="char-info">
-            <h5>{character.name ? character.name : ". . .loading"}</h5>
-            <p>Diameter: {character.diameter ? character.diameter : ". . .loading"}</p>
-            <p>Gravity: {character.gravity ? character.gravity : ". . .loading"}</p>
-            <p>Climate: {character.climate ? character.climate : ". . .loading"}</p>
-            <p>Terrain: {character.terrain ? character.terrain : ". . .loading"} </p>
-            <p>Population: {character.population ? character.population : ". . .loading"}</p>
+            <h5>{search.name ? search.name : ". . .loading"}</h5>
+            <p>Diameter: {search.diameter ? search.diameter : ". . .loading"}</p>
+            <p>Gravity: {search.gravity ? search.gravity : ". . .loading"}</p>
+            <p>Climate: {search.climate ? search.climate : ". . .loading"}</p>
+            <p>Terrain: {search.terrain ? search.terrain : ". . .loading"} </p>
+            <p>Population: {search.population ? search.population : ". . .loading"}</p>
           </div>
         </Col>
       );
@@ -52,12 +51,12 @@ const DailyCard = ({ type }) => {
         <Col className="daily-card" md={6} xs={12}>
           <h4>Starship:</h4>
           <div className="char-info">
-            <h5>{character.name ? character.name : ". . .loading"}</h5>
-            <p>Model: {character.model ? character.model : ". . .loading"}</p>
-            <p>Manufacturer: {character.manufacturer ? character.manufacturer : ". . .loading"}</p>
-            <p>Cost: {character.cost_in_credits ? character.cost_in_credits + " credits" : ". . .loading"}</p>
-            <p>Length: {character.length ? character.length + " Kg" : ". . .loading"} </p>
-            <p>Hyperdrive rating: {character.hyperdrive_rating ? character.hyperdrive_rating : ". . .loading"}</p>
+            <h5>{search.name ? search.name : ". . .loading"}</h5>
+            <p>Model: {search.model ? search.model : ". . .loading"}</p>
+            <p>Manufacturer: {search.manufacturer ? search.manufacturer : ". . .loading"}</p>
+            <p>Cost: {search.cost_in_credits ? search.cost_in_credits + " credits" : ". . .loading"}</p>
+            <p>Length: {search.length ? search.length + " Kg" : ". . .loading"} </p>
+            <p>Hyperdrive rating: {search.hyperdrive_rating ? search.hyperdrive_rating : ". . .loading"}</p>
           </div>
         </Col>
       );
