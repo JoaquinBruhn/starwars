@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 import { reqRndmChar } from "../../../rquests/recData";
+import "./dailyCard.css";
 
 const DailyCard = ({ type }) => {
   const [characterType, setCharacterType] = useState(type);
@@ -22,9 +23,9 @@ const DailyCard = ({ type }) => {
   switch (characterType) {
     case "people":
       return (
-        <Col md={6} xs={12}>
+        <Col className="daily-card" md={6} xs={12}>
           <h4>Character:</h4>
-          <div>
+          <div className="char-info">
             <h5>{character.name ? character.name : ". . .loading"}</h5>
             <p>Year of birth: {character.birth_year ? character.birth_year : ". . .loading"}</p>
             <p>Height: {character.height ? character.height : ". . .loading"}</p>
@@ -34,9 +35,9 @@ const DailyCard = ({ type }) => {
       );
     case "planets":
       return (
-        <Col md={6} xs={12}>
+        <Col className="daily-card" md={6} xs={12}>
           <h4>Planet:</h4>
-          <div>
+          <div className="char-info">
             <h5>{character.name ? character.name : ". . .loading"}</h5>
             <p>Diameter: {character.diameter ? character.diameter : ". . .loading"}</p>
             <p>Gravity: {character.gravity ? character.gravity : ". . .loading"}</p>
@@ -48,9 +49,9 @@ const DailyCard = ({ type }) => {
       );
     case "starships":
       return (
-        <Col md={6} xs={12}>
+        <Col className="daily-card" md={6} xs={12}>
           <h4>Starship:</h4>
-          <div>
+          <div className="char-info">
             <h5>{character.name ? character.name : ". . .loading"}</h5>
             <p>Model: {character.model ? character.model : ". . .loading"}</p>
             <p>Manufacturer: {character.manufacturer ? character.manufacturer : ". . .loading"}</p>
@@ -63,9 +64,9 @@ const DailyCard = ({ type }) => {
 
     default:
       return (
-        <Col md={6} xs={12}>
-          <h4>{type + ":"} </h4>
-          <h5>couldn´t find one</h5>
+        <Col className="daily-card" md={6} xs={12}>
+          <h4>{type === "starships" ? "Starship:" : type === "planets" ? "Planet" : `${type}:`} </h4>
+          <h5 className="char-info">Unknown</h5>
         </Col>
       );
   }

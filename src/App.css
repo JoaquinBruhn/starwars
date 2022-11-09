@@ -1,12 +1,13 @@
 :root {
   --primary-color: #000;
   --secondary-color: #ffffff;
+  --tertiary-color: #ffff00;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   text-align: center;
   width: 100%;
   min-height: 100vh;

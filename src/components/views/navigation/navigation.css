@@ -1,5 +1,11 @@
+.navbar {
+  width: 100%;
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  z-index: 2;
+}
+
 .logo {
-  height: 70px;
+  height: 60px;
   margin: 20px;
 }
 
