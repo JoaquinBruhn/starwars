@@ -1,0 +1,20 @@
+.profile-card {
+  min-height: 500px;
+  width: 100%;
+  padding: 50px;
+  background-color: var(--tertiary-color);
+  border-radius: 50px;
+}
+.profile-card > div {
+  margin: 30px 0;
+}
+.profile-image {
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+.profile-card * {
+  color: var(--primary-color);
+}
