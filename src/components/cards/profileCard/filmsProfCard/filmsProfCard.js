@@ -12,11 +12,11 @@ const FilmsProfCard = ({ item }) => {
       </Col>
 
       <Col md={6} xs={12}>
-        <h3>Intro crawl:</h3>
+        <h2>Intro crawl:</h2>
         <h6>{item.opening_crawl}</h6>
       </Col>
       <Col md={6} xs={12}>
-        <h3>Production data:</h3>
+        <h2>Production data:</h2>
         <h5>Director: {item.director}</h5>
         <h5>Producer: {item.producer}</h5>
         <h5>Release date: {item.release_date}</h5>
