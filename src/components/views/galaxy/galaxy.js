@@ -26,7 +26,6 @@ const Galaxy = () => {
 
   useEffect(() => {
     if (page === 1) {
-      console.log("new fetch");
       getNumbPage(key);
     } else {
       setPage(1);
@@ -34,8 +33,6 @@ const Galaxy = () => {
   }, [key]);
 
   useEffect(() => {
-    console.log("new fetch");
-
     getNumbPage(key, page);
   }, [page]);
 
