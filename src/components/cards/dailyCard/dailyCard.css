@@ -1,0 +1,14 @@
+.daily-card > h4 {
+  color: var(--secondary-color);
+}
+
+.char-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px 40px;
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  border-radius: 50px;
+}

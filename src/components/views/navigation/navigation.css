@@ -1,0 +1,24 @@
+.navbar {
+  width: 100%;
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  z-index: 2;
+}
+
+.logo {
+  height: 60px;
+  margin: 20px;
+}
+
+.linksNav {
+  color: var(--secondary-color) !important;
+  margin: 10px;
+}
+
+.linksNav > h2 {
+  transition: ease-in 0.2s;
+}
+
+.linksNav > h2:hover {
+  font-size: 2.5rem;
+  transition: ease-in 0.2s;
+}
