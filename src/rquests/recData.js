@@ -8,7 +8,7 @@ export const reqObjNumb = async (type) => {
   return pageData.count;
 };
 
-export const reqChar = async (type, id) => {
+export const reqCharById = async (type, id) => {
   const charData = await fetch(`https://swapi.dev/api/${type}/${id}`);
   return await charData.json();
 };
@@ -16,6 +16,25 @@ export const reqChar = async (type, id) => {
 export const reqRndmChar = async (type) => {
   const totalChar = await reqObjNumb(type);
   const rndmId = Math.floor(Math.random() * totalChar) + 1;
-  const rndmChar = await reqChar(type, rndmId);
+  const rndmChar = await reqCharById(type, rndmId);
   return rndmChar;
+};
+
+export const reqFilters = async () => {
+  const getFilters = await fetch(`https://swapi.dev/api`);
+  const filterArray = Object.keys(await getFilters.json());
+  return filterArray;
+};
+
+export const reqNumbPage = async (type, numb) => {
+  let getNumbPage = [];
+  if (!numb) {
+    getNumbPage = await fetch(`https://swapi.dev/api/${type}`);
+  } else {
+    getNumbPage = await fetch(`https://swapi.dev/api/${type}/?page=${numb}`);
+  }
+
+  const pageData = await getNumbPage.json();
+  console.log(pageData);
+  return pageData;
 };
