@@ -35,7 +35,6 @@ export const reqNumbPage = async (type, numb) => {
   }
 
   const pageData = await getNumbPage.json();
-  console.log(pageData);
   return pageData;
 };
 
