@@ -5,6 +5,7 @@
 }
 
 .filter-selector {
+  cursor: pointer;
   text-transform: capitalize;
   color: var(--tertiary-color);
   margin: 20px 0;
