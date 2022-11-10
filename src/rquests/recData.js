@@ -38,3 +38,10 @@ export const reqNumbPage = async (type, numb) => {
   console.log(pageData);
   return pageData;
 };
+
+export const reqCharByName = async (type, name) => {
+  const charSearch = await fetch(`https://swapi.dev/api/${type}?search=${name}`);
+  const charData = await charSearch.json();
+
+  return charData.results[0];
+};
